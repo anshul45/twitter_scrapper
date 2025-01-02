@@ -18,7 +18,7 @@ export class TwitterController {
     ) {
         try {
           const result = await this.twitter.getTweets(username,cashtag)
-          console.log(result)
+          return result.content;
         } catch (error) {
             throw new HttpException(
                 {
